@@ -6,7 +6,10 @@
   "scripts": {
     "test": "browserify www/index.js -o www/bundle.js && node test.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maxogden/socket-sync.git"
+  },
   "author": "max ogden",
   "license": "BSD",
   "dependencies": {
