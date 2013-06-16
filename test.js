@@ -1,0 +1,3 @@
+var socketSync = require('./')
+
+socketSync()

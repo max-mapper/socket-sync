@@ -1,0 +1,20 @@
+{
+  "name": "socket-sync",
+  "version": "0.0.0",
+  "description": "bidirectional replication of large data sets (binary or ascii) between node and web browsers using websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify www/index.js -o www/bundle.js && node test.js"
+  },
+  "repository": "",
+  "author": "max ogden",
+  "license": "BSD",
+  "dependencies": {
+    "level-replicate": "~1.0.4",
+    "level-sublevel": "~4.7.0",
+    "ws": "~0.4.25",
+    "websocket-stream": "~0.1.0",
+    "levelup": "~0.10.0",
+    "doorknob": "0.0.1"
+  }
+}
