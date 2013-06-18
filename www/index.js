@@ -2,7 +2,7 @@ var websocket = require('websocket-stream')
 var levelup = require('levelup')
 var leveljs = require('level-js')
 var sublevel = require('level-sublevel')
-var replicate = require('level-replicate')
+var replicate = require('level-replicate/msgpack')
 var request = require('browser-request')
 var persona = require('persona-id')()
 

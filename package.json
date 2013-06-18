@@ -13,11 +13,11 @@
   "author": "max ogden",
   "license": "BSD",
   "dependencies": {
-    "level-replicate": "~1.0.4",
     "level-sublevel": "~4.7.0",
     "ws": "~0.4.25",
     "websocket-stream": "~0.1.0",
     "levelup": "~0.10.0",
-    "doorknob": "0.0.1"
+    "doorknob": "0.0.1",
+    "level-replicate": "~1.1.0"
   }
 }

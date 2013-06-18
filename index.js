@@ -4,19 +4,17 @@ var http = require('http')
 var path = require('path')
 var doorknobServer = require('doorknob/server')
 var sublevel = require('level-sublevel')
-var replicate = require('level-replicate')
+var replicate = require('level-replicate/msgpack')
 var levelup = require('levelup')
 
 module.exports = function(opts) {
-  if (!opts) opts = {
-    port: 8181
-  }
+  if (!opts) opts = { port: 8181 }
   
   var httpServer = opts.httpServer || doorknobServer(opts.port)
   var webSocketServer = opts.webSocketServer || new WebSocketServer({ noServer: true, clientTracking: false })
-
-  var replicator = opts.replicator || replicate(sublevel(levelup('data.db')), 'master', "MASTER-1")
-
+  var db = opts.db || sublevel(levelup('data.db'))
+  var replicator = opts.replicator || replicate(db, 'master', "MASTER-1")
+  
   httpServer.on('upgrade', function (req, socket, head) {
     console.log('on upgrade')
     var sessionID = httpServer.doorknob.persona.getId(req)
