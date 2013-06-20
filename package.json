@@ -1,6 +1,6 @@
 {
   "name": "socket-sync",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "bidirectional replication of large data sets (binary or ascii) between node and web browsers using websockets",
   "main": "index.js",
   "scripts": {
